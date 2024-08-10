@@ -130,12 +130,11 @@ def places_search():
 
     data = request.get_json()
 
-    if data and len(data):
-        states = data.get('states', None)
-        cities = data.get('cities', None)
-        amenities = data.get('amenities', None)
+    states = data.get('states', None)
+    cities = data.get('cities', None)
+    amenities = data.get('amenities', None)
 
-    if not data or not len(data) or (
+    if not len(data) or (
             not states and
             not cities and
             not amenities):
